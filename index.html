@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishvarjot Singh | Premium Social Media Manager & Marketing Strategist</title>
+
+    <!-- Meta description for SEO -->
+    <meta name="description"
+        content="Helping brands grow through strategic content, social media management, and performance marketing.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter for that clean, premium tech look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bgMain: '#0A0A0A',
+                        bgCard: '#121212',
+                        accent: '#8B5CF6',
+                        textMain: '#FFFFFF',
+                        textMuted: '#A3A3A3',
+                        borderSubtle: '#262626'
+                    },
+                    animation: {
+                        'marquee': 'marquee 40s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0A0A0A;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Lenis smooth scroll recommended styles */
+        html.lenis,
+        html.lenis body {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #404040;
+        }
+
+        /* Premium button hover effects */
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+
+        /* Subtle hero background glow */
+        .hero-glow {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.15) 0%, rgba(10, 10, 10, 0) 60%);
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.8;
+            animation: pulse-glow 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.9;
+            }
+        }
+
+        /* Utility classes for GSAP initial states */
+        .gs-reveal {
+            visibility: hidden;
+        }
+
+        .huge-text {
+            font-size: clamp(4rem, 12vw, 15rem);
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+        }
+
+        .section-padding {
+            padding-top: clamp(6rem, 15vw, 12rem);
+            padding-bottom: clamp(6rem, 15vw, 12rem);
+        }
+
+        /* Marquee specific styling */
+        .marquee-container {
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+
+        /* Premium card hover */
+        .premium-card {
+            transition: border-color 0.4s ease, background-color 0.4s ease;
+        }
+
+        .premium-card:hover {
+            border-color: rgba(139, 92, 246, 0.5);
+            background-color: rgba(20, 20, 20, 1);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-accent selection:text-white">
+
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-8 mix-blend-difference">
+        <div class="max-w-[90rem] mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tighter uppercase text-white">Ishvarjot.</a>
+            <a href="#contact"
+                class="text-sm font-semibold tracking-wide hover:text-accent transition-colors duration-300 uppercase text-white">Let's
+                Talk</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ========================================== -->
+        <!-- SECTION 1: HERO                            -->
+        <!-- ========================================== -->
+        <section class="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
+            <div class="hero-glow"></div>
+
+            <div class="max-w-[90rem] mx-auto w-full relative z-10 flex flex-col items-center text-center">
+                <div class="mb-8 w-full">
+                    <h1
+                        class="huge-text font-black uppercase text-transparent bg-clip-text bg-gradient-to-b from-white to-neutral-500 gs-reveal-hero">
+                        Attention
+                    </h1>
+                    <h1 class="huge-text font-black uppercase text-white gs-reveal-hero">
+                        That Drives
+                    </h1>
+                    <h1 class="huge-text font-black uppercase text-accent gs-reveal-hero">
+                        Business.
+                    </h1>
+                </div>
+
+                <p
+                    class="text-xl md:text-2xl lg:text-3xl text-neutral-400 max-w-3xl font-light tracking-tight gs-reveal-hero mb-12">
+                    Helping brands grow through strategic content, social media management, and performance marketing.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full gs-reveal-hero">
+                    <a href="#contact"
+                        class="btn-primary w-full sm:w-auto px-10 py-5 bg-accent text-white rounded-full font-bold tracking-wide flex items-center justify-center gap-3 group shadow-[0_0_30px_rgba(139,92,246,0.2)] hover:shadow-[0_0_50px_rgba(139,92,246,0.4)]">
+                        Book A Strategy Call
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                    <a href="#work"
+                        class="w-full sm:w-auto px-10 py-5 bg-transparent border border-borderSubtle hover:border-white text-white rounded-full font-bold tracking-wide transition-colors duration-300 flex items-center justify-center">
+                        View Selected Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 2: TRUSTED BY (MARQUEE)            -->
+        <!-- ========================================== -->
+        <section class="py-16 md:py-24 border-y border-borderSubtle bg-bgMain relative z-10 overflow-hidden">
+            <div class="max-w-[90rem] mx-auto px-6 mb-12 text-center">
+                <p class="text-xs md:text-sm font-bold tracking-[0.2em] text-neutral-500 uppercase gs-reveal">Brands
+                    I've Worked With</p>
+            </div>
+
+            <div class="marquee-container w-full overflow-hidden flex whitespace-nowrap">
+                <!-- Inner div spans 200% width to allow seamless scrolling of duplicated content -->
+                <div class="animate-marquee flex items-center w-max">
+                    <!-- Set 1 -->
+                    <div
+                        class="flex items-center gap-16 md:gap-32 px-8 md:px-16 text-3xl md:text-5xl font-black tracking-tighter text-neutral-700 uppercase">
+                        <span>TechFlow</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>Elevate DTC</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>NexusData</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>Aura Health</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>Lumina</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>Vertex Partners</span>
+                        <span class="text-neutral-800">•</span>
+                    </div>
+                    <!-- Set 2 (Duplicate for seamless loop) -->
+                    <div
+                        class="flex items-center gap-16 md:gap-32 px-8 md:px-16 text-3xl md:text-5xl font-black tracking-tighter text-neutral-700 uppercase">
+                        <span>TechFlow</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>Elevate DTC</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>NexusData</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>Aura Health</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>Lumina</span>
+                        <span class="text-neutral-800">•</span>
+                        <span>Vertex Partners</span>
+                        <span class="text-neutral-800">•</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 3: THE PROBLEM                     -->
+        <!-- ========================================== -->
+        <section class="section-padding px-6 bg-bgMain">
+            <div class="max-w-[90rem] mx-auto">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-end">
+                    <div class="lg:col-span-8">
+                        <h2
+                            class="text-[clamp(3rem,8vw,10rem)] font-black tracking-[-0.04em] leading-[0.9] text-white gs-reveal">
+                            Posting More<br>
+                            <span class="text-neutral-600">Isn't The Answer.</span>
+                        </h2>
+                    </div>
+                    <div class="lg:col-span-4 lg:pb-4">
+                        <p
+                            class="text-xl md:text-2xl text-neutral-400 font-light leading-relaxed tracking-tight gs-reveal">
+                            Most brands struggle not because they lack content, but because they lack a system. Without
+                            a clear strategy, you're just shouting into the void. I build the architecture that makes
+                            your voice heard.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 4: RESULTS                         -->
+        <!-- ========================================== -->
+        <section class="py-32 px-6 bg-bgCard border-y border-borderSubtle">
+            <div class="max-w-[90rem] mx-auto">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-borderSubtle">
+
+                    <div class="text-center pt-8 md:pt-0 gs-reveal">
+                        <div
+                            class="text-[clamp(5rem,8vw,8rem)] font-black tracking-tighter text-accent mb-2 flex justify-center items-baseline leading-none">
+                            <span class="counter" data-target="20">0</span><span
+                                class="text-[clamp(3rem,5vw,5rem)]">M+</span>
+                        </div>
+                        <p
+                            class="text-xl text-neutral-400 font-medium tracking-wide uppercase text-sm tracking-[0.2em]">
+                            Views Generated</p>
+                    </div>
+
+                    <div class="text-center pt-16 md:pt-0 gs-reveal">
+                        <div
+                            class="text-[clamp(5rem,8vw,8rem)] font-black tracking-tighter text-white mb-2 flex justify-center items-baseline leading-none">
+                            <span class="counter" data-target="150">0</span><span
+                                class="text-[clamp(3rem,5vw,5rem)]">+</span>
+                        </div>
+                        <p
+                            class="text-xl text-neutral-400 font-medium tracking-wide uppercase text-sm tracking-[0.2em]">
+                            Campaigns Launched</p>
+                    </div>
+
+                    <div class="text-center pt-16 md:pt-0 gs-reveal">
+                        <div
+                            class="text-[clamp(5rem,8vw,8rem)] font-black tracking-tighter text-white mb-2 flex justify-center items-baseline leading-none">
+                            <span class="counter" data-target="40">0</span><span
+                                class="text-[clamp(3rem,5vw,5rem)]">+</span>
+                        </div>
+                        <p
+                            class="text-xl text-neutral-400 font-medium tracking-wide uppercase text-sm tracking-[0.2em]">
+                            Brands Scaled</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 5: CASE STUDIES                    -->
+        <!-- ========================================== -->
+        <section id="work" class="section-padding px-6 bg-bgMain">
+            <div class="max-w-[90rem] mx-auto">
+                <h2
+                    class="text-[clamp(4rem,9vw,9rem)] font-black tracking-[-0.04em] mb-24 lg:mb-40 leading-none gs-reveal">
+                    Selected Work.</h2>
+
+                <div class="space-y-32 lg:space-y-48">
+                    <!-- Project 1 -->
+                    <div class="group relative gs-reveal">
+                        <div class="grid xl:grid-cols-12 gap-12 xl:gap-24 items-center">
+                            <div
+                                class="xl:col-span-7 aspect-[4/3] bg-bgCard rounded-[2rem] overflow-hidden relative border border-borderSubtle premium-card">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-neutral-800 to-[#0A0A0A] flex items-center justify-center">
+                                    <span
+                                        class="text-neutral-700 font-black text-4xl md:text-6xl tracking-tighter uppercase">Fintech
+                                        App</span>
+                                </div>
+                            </div>
+                            <div class="xl:col-span-5">
+                                <div class="mb-8 flex flex-wrap gap-3">
+                                    <span
+                                        class="px-5 py-2 rounded-full border border-borderSubtle text-xs font-bold tracking-widest uppercase text-neutral-300">Growth</span>
+                                    <span
+                                        class="px-5 py-2 rounded-full border border-borderSubtle text-xs font-bold tracking-widest uppercase text-neutral-300">Content</span>
+                                </div>
+                                <h3
+                                    class="text-4xl md:text-6xl lg:text-7xl font-black tracking-[-0.03em] mb-12 leading-[1.05]">
+                                    Scaling a Fintech Startup to 100k Users.</h3>
+
+                                <div class="space-y-8 border-l-2 border-borderSubtle pl-6">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Challenge</h4>
+                                        <p class="text-lg text-neutral-400 font-light leading-relaxed">High customer
+                                            acquisition cost and low brand awareness in a saturated market.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Approach</h4>
+                                        <p class="text-lg text-neutral-400 font-light leading-relaxed">Developed an
+                                            educational short-form content engine demystifying finance, paired with
+                                            targeted performance marketing.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Outcome</h4>
+                                        <p class="text-xl text-white font-medium leading-relaxed">300% increase in
+                                            organic leads and a 45% reduction in CAC within 6 months.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group relative gs-reveal">
+                        <div class="grid xl:grid-cols-12 gap-12 xl:gap-24 items-center">
+                            <div
+                                class="xl:col-span-7 xl:order-last aspect-[4/3] bg-bgCard rounded-[2rem] overflow-hidden relative border border-borderSubtle premium-card">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-bl from-neutral-800 to-[#0A0A0A] flex items-center justify-center">
+                                    <span
+                                        class="text-neutral-700 font-black text-4xl md:text-6xl tracking-tighter uppercase">DTC
+                                        Brand</span>
+                                </div>
+                            </div>
+                            <div class="xl:col-span-5">
+                                <div class="mb-8 flex flex-wrap gap-3">
+                                    <span
+                                        class="px-5 py-2 rounded-full border border-borderSubtle text-xs font-bold tracking-widest uppercase text-neutral-300">Social
+                                        Media</span>
+                                    <span
+                                        class="px-5 py-2 rounded-full border border-borderSubtle text-xs font-bold tracking-widest uppercase text-neutral-300">Strategy</span>
+                                </div>
+                                <h3
+                                    class="text-4xl md:text-6xl lg:text-7xl font-black tracking-[-0.03em] mb-12 leading-[1.05]">
+                                    Revitalizing a Lifestyle DTC Brand.</h3>
+
+                                <div class="space-y-8 border-l-2 border-borderSubtle pl-6">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Challenge</h4>
+                                        <p class="text-lg text-neutral-400 font-light leading-relaxed">Stagnant social
+                                            growth and declining engagement rates across platforms.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Approach</h4>
+                                        <p class="text-lg text-neutral-400 font-light leading-relaxed">Shifted from
+                                            product-centric posting to lifestyle storytelling, utilizing user-generated
+                                            content and community building.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Outcome</h4>
+                                        <p class="text-xl text-white font-medium leading-relaxed">Generated 5M+ organic
+                                            impressions and increased community engagement by 150%.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="group relative gs-reveal">
+                        <div class="grid xl:grid-cols-12 gap-12 xl:gap-24 items-center">
+                            <div
+                                class="xl:col-span-7 aspect-[4/3] bg-bgCard rounded-[2rem] overflow-hidden relative border border-borderSubtle premium-card">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-neutral-800 to-[#0A0A0A] flex items-center justify-center">
+                                    <span
+                                        class="text-neutral-700 font-black text-4xl md:text-6xl tracking-tighter uppercase">B2B
+                                        SaaS</span>
+                                </div>
+                            </div>
+                            <div class="xl:col-span-5">
+                                <div class="mb-8 flex flex-wrap gap-3">
+                                    <span
+                                        class="px-5 py-2 rounded-full border border-borderSubtle text-xs font-bold tracking-widest uppercase text-neutral-300">Lead
+                                        Gen</span>
+                                    <span
+                                        class="px-5 py-2 rounded-full border border-borderSubtle text-xs font-bold tracking-widest uppercase text-neutral-300">Paid
+                                        Media</span>
+                                </div>
+                                <h3
+                                    class="text-4xl md:text-6xl lg:text-7xl font-black tracking-[-0.03em] mb-12 leading-[1.05]">
+                                    Building Authority for a B2B SaaS.</h3>
+
+                                <div class="space-y-8 border-l-2 border-borderSubtle pl-6">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Challenge</h4>
+                                        <p class="text-lg text-neutral-400 font-light leading-relaxed">Struggling to
+                                            stand out in a competitive enterprise software landscape.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Approach</h4>
+                                        <p class="text-lg text-neutral-400 font-light leading-relaxed">Created a
+                                            thought-leadership content pipeline on LinkedIn, supported by hyper-targeted
+                                            account-based marketing.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-accent uppercase tracking-[0.2em] mb-2">The
+                                            Outcome</h4>
+                                        <p class="text-xl text-white font-medium leading-relaxed">Secured $2M+ in
+                                            pipeline value directly attributed to social strategy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 6: SERVICES (OUTCOMES)             -->
+        <!-- ========================================== -->
+        <section class="section-padding px-6 bg-bgCard border-t border-borderSubtle relative overflow-hidden">
+            <!-- Subtle background accent -->
+            <div
+                class="absolute top-0 right-0 w-[600px] h-[600px] bg-accent opacity-[0.03] rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="max-w-[90rem] mx-auto relative z-10">
+                <div class="mb-20 lg:mb-32 gs-reveal">
+                    <h2 class="text-[clamp(3rem,7vw,8rem)] font-black tracking-[-0.04em] mb-8 leading-none">How I
+                        Help<br><span class="text-neutral-600">Brands Win.</span></h2>
+                    <p class="text-xl md:text-3xl text-neutral-400 font-light max-w-3xl tracking-tight">I don't just
+                        manage accounts. I build systems that generate measurable business outcomes.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 lg:gap-10">
+                    <!-- Outcome 1 -->
+                    <div
+                        class="bg-bgMain p-10 lg:p-16 rounded-[2rem] border border-borderSubtle premium-card gs-reveal group">
+                        <h3
+                            class="text-3xl md:text-5xl font-black tracking-[-0.03em] mb-6 text-white group-hover:text-accent transition-colors duration-300">
+                            Build A Content Engine</h3>
+                        <p class="text-lg md:text-xl text-neutral-400 font-light leading-relaxed">Transition from random
+                            posting to a predictable, scalable content system that educates, entertains, and converts
+                            your target audience consistently.</p>
+                    </div>
+
+                    <!-- Outcome 2 -->
+                    <div
+                        class="bg-bgMain p-10 lg:p-16 rounded-[2rem] border border-borderSubtle premium-card gs-reveal group">
+                        <h3
+                            class="text-3xl md:text-5xl font-black tracking-[-0.03em] mb-6 text-white group-hover:text-accent transition-colors duration-300">
+                            Increase Brand Visibility</h3>
+                        <p class="text-lg md:text-xl text-neutral-400 font-light leading-relaxed">Dominate your niche
+                            across platforms. I use data-driven organic strategies to ensure your brand is seen by the
+                            people who matter most.</p>
+                    </div>
+
+                    <!-- Outcome 3 -->
+                    <div
+                        class="bg-bgMain p-10 lg:p-16 rounded-[2rem] border border-borderSubtle premium-card gs-reveal group">
+                        <h3
+                            class="text-3xl md:text-5xl font-black tracking-[-0.03em] mb-6 text-white group-hover:text-accent transition-colors duration-300">
+                            Generate Better Leads</h3>
+                        <p class="text-lg md:text-xl text-neutral-400 font-light leading-relaxed">Eyeballs don't pay
+                            bills. I design strategic funnels that turn passive scrollers into qualified leads and
+                            ultimately, paying customers.</p>
+                    </div>
+
+                    <!-- Outcome 4 -->
+                    <div
+                        class="bg-bgMain p-10 lg:p-16 rounded-[2rem] border border-borderSubtle premium-card gs-reveal group">
+                        <h3
+                            class="text-3xl md:text-5xl font-black tracking-[-0.03em] mb-6 text-white group-hover:text-accent transition-colors duration-300">
+                            Strengthen Authority</h3>
+                        <p class="text-lg md:text-xl text-neutral-400 font-light leading-relaxed">Position your brand or
+                            founder as the go-to expert in your industry through high-value thought leadership and
+                            strategic positioning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 7: TESTIMONIALS                    -->
+        <!-- ========================================== -->
+        <section class="section-padding px-6 bg-bgMain border-t border-borderSubtle">
+            <div class="max-w-[90rem] mx-auto">
+                <h2 class="text-4xl md:text-6xl font-black tracking-[-0.04em] mb-20 text-center gs-reveal">Don't Just
+                    Take My Word For It.</h2>
+
+                <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="bg-bgCard p-10 rounded-[2rem] border border-borderSubtle flex flex-col justify-between gs-reveal">
+                        <p class="text-xl text-neutral-300 font-light leading-relaxed mb-12 tracking-tight">
+                            "Honestly, before working with Ishvarjot, our social media was a mess. We were just throwing
+                            things at the wall. He came in, stripped it all back, and gave us a strategy that actually
+                            makes sense. We saw a 40% bump in inbound leads in the first quarter."
+                        </p>
+                        <div class="flex items-center gap-5">
+                            <div
+                                class="w-14 h-14 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center font-bold text-lg text-accent">
+                                SM</div>
+                            <div>
+                                <h4 class="font-bold text-lg">Sarah Mitchell</h4>
+                                <p class="text-sm text-neutral-500 uppercase tracking-widest font-semibold">CMO,
+                                    TechFlow</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="bg-bgCard p-10 rounded-[2rem] border border-borderSubtle flex flex-col justify-between gs-reveal">
+                        <p class="text-xl text-neutral-300 font-light leading-relaxed mb-12 tracking-tight">
+                            "He just gets it. Ishvarjot doesn't focus on vanity metrics; he cares about what actually
+                            drives revenue. The content engine he built for us is running flawlessly, and it's
+                            completely taken the stress off my plate as a founder."
+                        </p>
+                        <div class="flex items-center gap-5">
+                            <div
+                                class="w-14 h-14 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center font-bold text-lg text-accent">
+                                DR</div>
+                            <div>
+                                <h4 class="font-bold text-lg">David Reynolds</h4>
+                                <p class="text-sm text-neutral-500 uppercase tracking-widest font-semibold">Founder,
+                                    Elevate DTC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="bg-bgCard p-10 rounded-[2rem] border border-borderSubtle flex flex-col justify-between gs-reveal">
+                        <p class="text-xl text-neutral-300 font-light leading-relaxed mb-12 tracking-tight">
+                            "Working with him was the best marketing decision we made this year. He helped us translate
+                            our complex B2B offering into content people actually want to read. The jump in our LinkedIn
+                            engagement and subsequent pipeline growth has been massive."
+                        </p>
+                        <div class="flex items-center gap-5">
+                            <div
+                                class="w-14 h-14 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center font-bold text-lg text-accent">
+                                AC</div>
+                            <div>
+                                <h4 class="font-bold text-lg">Alex Chen</h4>
+                                <p class="text-sm text-neutral-500 uppercase tracking-widest font-semibold">VP Sales,
+                                    NexusData</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 8: ABOUT / PHILOSOPHY              -->
+        <!-- ========================================== -->
+        <section class="section-padding px-6 bg-bgCard border-t border-borderSubtle">
+            <div class="max-w-[70rem] mx-auto text-center">
+                <h2 class="text-[clamp(3rem,7vw,8rem)] font-black tracking-[-0.04em] leading-[0.9] mb-16 gs-reveal">
+                    Behind Every Successful Campaign<br>
+                    <span class="text-neutral-600">Is A Clear Strategy.</span>
+                </h2>
+                <div
+                    class="space-y-12 text-xl md:text-3xl text-neutral-400 font-light leading-relaxed text-left md:text-center tracking-tight mx-auto gs-reveal">
+                    <p>
+                        I believe that great marketing isn't about being the loudest; it's about being the most
+                        relevant. Too many brands waste time creating content that looks pretty but does nothing for
+                        their bottom line.
+                    </p>
+                    <p>
+                        My philosophy is simple: understand the audience deeply, reverse-engineer their desires, and
+                        build a systematic approach to deliver value consistently. I bridge the gap between creative
+                        storytelling and hard data.
+                    </p>
+                    <p class="text-white font-medium">
+                        Whether we are building a personal brand for a founder or scaling a corporate social presence,
+                        the goal remains the same: create attention that converts.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 9: FINAL CTA                       -->
+        <!-- ========================================== -->
+        <section id="contact"
+            class="section-padding px-6 bg-bgMain relative overflow-hidden flex items-center justify-center min-h-screen border-t border-borderSubtle">
+            <!-- Centralized powerful glow -->
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.1)_0%,transparent_50%)] pointer-events-none">
+            </div>
+
+            <div class="max-w-[90rem] mx-auto w-full text-center relative z-10 flex flex-col items-center">
+                <h2 class="huge-text font-black uppercase gs-reveal mb-10 w-full text-white">
+                    Your Next<br>Customer<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-b from-neutral-500 to-neutral-800">Is
+                        Already Online.</span>
+                </h2>
+
+                <p
+                    class="text-2xl md:text-4xl text-neutral-400 font-light mb-16 max-w-4xl mx-auto tracking-tight gs-reveal">
+                    Let's create a strategy that helps them find you. Stop guessing and start growing.
+                </p>
+
+                <div class="gs-reveal">
+                    <a href="mailto:hello@ishvarjot.com"
+                        class="btn-primary inline-flex px-14 py-8 bg-accent text-white rounded-full text-2xl font-bold tracking-wide items-center justify-center gap-4 group shadow-[0_0_50px_rgba(139,92,246,0.3)] hover:shadow-[0_0_80px_rgba(139,92,246,0.5)]">
+                        Book A Strategy Call
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 group-hover:translate-x-2 transition-transform duration-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-10 border-t border-borderSubtle bg-bgCard text-center md:text-left px-6">
+            <div
+                class="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-neutral-500 font-medium tracking-wide uppercase">
+                <p>© 2026 Ishvarjot Singh. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition-colors duration-300">LinkedIn</a>
+                    <a href="#" class="hover:text-white transition-colors duration-300">Twitter</a>
+                    <a href="#" class="hover:text-white transition-colors duration-300">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Load Lenis for Smooth Scrolling -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Load GSAP Core and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Register ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Initialize Lenis Smooth Scroll (Premium Apple-like feel)
+        const lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        })
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000)
+        })
+        gsap.ticker.lagSmoothing(0)
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Hero Reveal Timeline
+            const heroTl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+            // Set initial state for hero elements
+            gsap.set('.gs-reveal-hero', { y: 60, opacity: 0, visibility: 'visible' });
+
+            heroTl.to('.gs-reveal-hero', {
+                y: 0,
+                opacity: 1,
+                duration: 1.5,
+                stagger: 0.15,
+                delay: 0.2
+            });
+
+            // 2. Universal Scroll Reveal
+            const revealElements = document.querySelectorAll('.gs-reveal');
+
+            revealElements.forEach((elem) => {
+                gsap.set(elem, { y: 60, opacity: 0, visibility: 'visible' });
+
+                ScrollTrigger.create({
+                    trigger: elem,
+                    start: "top 85%",
+                    onEnter: () => {
+                        gsap.to(elem, {
+                            y: 0,
+                            opacity: 1,
+                            duration: 1.2,
+                            ease: "power3.out",
+                            overwrite: "auto"
+                        });
+                    },
+                    once: true
+                });
+            });
+
+            // 3. Counter Animations
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+
+                ScrollTrigger.create({
+                    trigger: counter,
+                    start: "top 85%",
+                    once: true,
+                    onEnter: () => {
+                        let obj = { val: 0 };
+                        gsap.to(obj, {
+                            val: target,
+                            duration: 2.5,
+                            ease: "power3.out",
+                            onUpdate: () => {
+                                counter.innerText = Math.floor(obj.val);
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
